@@ -1,3 +1,5 @@
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class DateChecker {
@@ -18,10 +20,15 @@ public class DateChecker {
     }
 
     public boolean has31Days(Month month) {
-        return false;
+        
+        return Arrays.asList(
+            Month.JANUARY, 
+            Month.MARCH, 
+            Month.MAY,
+            Month.JULY, 
+            Month.AUGUST, 
+            Month.OCTOBER, 
+            Month.DECEMBER).contains(month);
     }
-
-    
-
 
 }
